@@ -1,10 +1,5 @@
 <h1>edit page of <%= @task.id %> </h1>
 
-<%= form_with(model: @task, local: true) do |f| %>
-  <%= f.label :content, 'task' %>
-  <%= f.text_field :content %>
-
-  <%= f.submit 'complete' %>
-<% end %>
+<%= render 'form', task: @task %>
 
 <%= link_to "back to tasklist", tasks_path %>
