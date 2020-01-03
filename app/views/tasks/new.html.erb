@@ -1,0 +1,10 @@
+<h1>create new task</h1>
+
+<%= form_with(model: @task, local: true) do |f| %>
+  <%= f.label :content, 'tasks' %>
+  <%= f.text_field :content %>
+
+  <%= f.submit 'complete' %>
+<% end %>
+
+<%= link_to 'back to tasklist', tasks_path %>
